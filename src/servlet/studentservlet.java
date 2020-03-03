@@ -27,13 +27,13 @@ public class studentservlet extends HttpServlet {
 		req.setCharacterEncoding("utf-8");
 		String id=req.getParameter("id");
 		student s=new student();
-		s.setId(id);
-		
+		s.setId("56");
+		System.out.println("Öí¶ù³æ");
 	studentservice stud=new studentservice();
 		  Map<String, List> list=stud.getLists(s);
 	      
 	      if(list!=null) {
-	    	
+	    	  System.out.println("ÖØÖı¶ş");
            	 req.getSession().setAttribute("list",list);
 	    	  req.getRequestDispatcher("information.jsp").forward(req, resp);
 	    }else {
